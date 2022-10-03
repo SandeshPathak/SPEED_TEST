@@ -30,4 +30,4 @@ app.get("*", function (request, response) {
   response.sendFile(path.resolve(__dirname, "./frontend/build", "index.html"));
 });
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, () => console.log(`Server running on port ${port}. Localhost: http://localhost:${port}`));
