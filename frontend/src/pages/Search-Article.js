@@ -13,7 +13,7 @@ const SearchArticle = () => {
 
     axios
       .get('http://localhost:5000/api/SPEED/search')
-      .then(res => { searchResults = res.data })
+      // .then(res => { searchResults = res.data })
       .catch(err => console.log("API error!"));
   };
 
