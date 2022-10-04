@@ -17,8 +17,12 @@ const SearchArticle = () => {
           title, author, description, publishedDate, publisher
         }
       })
-      .then(response => console.log(response))
+      .then(response => showSearchResults(response))
       .catch(err => console.log("API error!"));
+  };
+
+  const showSearchResults = results => {
+    console.log(!results);
   };
 
   const formToSearchArticle = (
