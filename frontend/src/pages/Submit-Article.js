@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const SubmitArticle = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const handleSubmissionOfArticle = (event) => {
     event.preventDefault();
 
-    const [isSubmitted, setIsSubmitted] = useState(false);
     var title = document.getElementsById("title").value;
     var author = document.getElementsById("author").value;
     var description = document.getElementsById("description").value;
