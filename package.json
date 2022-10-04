@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "website: https://speed-website.herokuapp.com/",
   "main": "app.js",
+  "engines": {
+    "npm": "7.x",
+    "node": "16.x"
+  },
   "scripts": {
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
     "start": "node app.js",
@@ -25,15 +29,5 @@
   "devDependencies": {
     "nodemon": "^2.0.19"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "bugs": {
-    "url": ""
-  },
-  "homepage": ".",
-  "engines": {
-    "node": "18.x"
-  }
+  "homepage": "."
 }
