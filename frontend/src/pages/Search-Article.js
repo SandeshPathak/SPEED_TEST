@@ -54,12 +54,12 @@ const SearchArticle = () => {
 
   return (
     <div>
-      formToSearchArticle
-      <div>
-        res.data {/* if count > 0 */}
+      <formToSearchArticle />
+      {/* <div>
+        res.data {/* if count > 0 }
         ? <div>Results: </div>
         : <i>No article found!</i>
-      </div>
+      </div> */}
     </div>
   );
 };
