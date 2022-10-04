@@ -51,7 +51,7 @@ router.get('/search', (req, res) => {
   console.log(title);
 
   Article.find({
-    $or: [{ title: title }, { author: author }, { description: description }, { publishedDate: publishedDate }, { publisher: publisher }]
+    $or: [{ title: req.query.title }, { author: req.query.author }, { description: req.query.description }, { publishedDate: req.query.publishedDate }, { publisher: req.query.publisher }]
   })
     .then((data) => res.json(data))
     .catch((err) => res.status(400).json({ error: "Database error!" }))
