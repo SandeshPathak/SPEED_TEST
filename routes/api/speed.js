@@ -42,12 +42,11 @@ router.post('/submit', (req, res) => {
 })
 
 router.get('/search', (req, res) => {
-  let title = req.params.title;
-  return res.json(req.query);
-  let author = req.params.author ?? '0';
-  let description = req.params.description ?? '0';
-  let publishedDate = req.params.publishedDate ?? '0';
-  let publisher = req.params.publisher ?? '0';
+  let title = req.query.title ?? '0';
+  let author = req.query.author ?? '0';
+  let description = req.query.description ?? '0';
+  let publishedDate = req.query.publishedDate ?? '0';
+  let publisher = req.query.publisher ?? '0';
 
   console.log(title);
 
