@@ -12,7 +12,7 @@ const SearchArticle = () => {
     var publisher = document.getElementById("publisher").value;
 
     axios
-      .get('http://localhost:5000/api/SPEED/search')
+      .get('/api/SPEED/search')
       // .then(res => { searchResults = res.data })
       .catch(err => console.log("API error!"));
   };
