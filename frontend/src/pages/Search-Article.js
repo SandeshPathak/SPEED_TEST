@@ -54,7 +54,7 @@ const SearchArticle = () => {
 
   return (
     <div>
-      <formToSearchArticle />
+      {formToSearchArticle}
       {/* <div>
         res.data {/* if count > 0 }
         ? <div>Results: </div>
