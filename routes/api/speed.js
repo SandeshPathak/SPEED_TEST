@@ -43,7 +43,7 @@ router.post('/submit', (req, res) => {
 
 router.get('/search', (req, res) => {
   let title = req.params.title;
-  return res.json(req);
+  return res.json(req.params);
   let author = req.params.author ?? '0';
   let description = req.params.description ?? '0';
   let publishedDate = req.params.publishedDate ?? '0';
