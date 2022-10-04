@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/maegastar/SPEED/issues"
   },
-  "homepage": "."
+  "homepage": ".",
+  "engines": {
+    "node": "18.x"
+  }
 }
