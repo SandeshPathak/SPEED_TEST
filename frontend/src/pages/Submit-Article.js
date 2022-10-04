@@ -56,8 +56,8 @@ const SubmitArticle = () => {
 
   return (
     <div>
-      formToSubmitArticle
-      <p>isSubmitted ? <i>Article Submitted Successfully</i> : <i></i></p>
+      {formToSubmitArticle}
+      {/* <p>isSubmitted ? <i>Article Submitted Successfully</i> : <i></i></p> */}
     </div>
   );
 };
