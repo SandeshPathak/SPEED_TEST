@@ -12,7 +12,7 @@ const SearchArticle = () => {
     var publisher = document.getElementById("publisher").value;
 
     axios
-      .get('/api/SPEED/search', null, {
+      .get('/api/SPEED/search', {
         params: {
           title, author, description, publishedDate, publisher
         }
