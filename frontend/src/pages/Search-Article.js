@@ -17,7 +17,7 @@ const SearchArticle = () => {
           title, author, description, publishedDate, publisher
         }
       })
-      .then(results)
+      .then(response => console.log(response))
       .catch(err => console.log("API error!"));
   };
 
