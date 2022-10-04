@@ -42,6 +42,12 @@ router.post('/submit', (req, res) => {
 })
 
 router.get('/search', (req, res) => {
+  let title = req.params.title;
+  let author = req.params.author;
+  let description = req.params.description;
+  let publishedDate = req.params.publishedDate;
+  let publisher = req.params.publisher;
+
   Article.find({
     $or: [{ title }, { author }, { description }, { publishedDate }, { publisher }]
   })
