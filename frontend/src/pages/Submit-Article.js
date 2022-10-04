@@ -7,11 +7,11 @@ const SubmitArticle = () => {
   const handleSubmissionOfArticle = (event) => {
     event.preventDefault();
 
-    var title = document.getElementsById("title").value;
-    var author = document.getElementsById("author").value;
-    var description = document.getElementsById("description").value;
-    var publishedDate = document.getElementsById("publishedDate").value;
-    var publisher = document.getElementsById("publisher").value;
+    var title = document.getElementById("title").value;
+    var author = document.getElementById("author").value;
+    var description = document.getElementById("description").value;
+    var publishedDate = document.getElementById("publishedDate").value;
+    var publisher = document.getElementById("publisher").value;
 
     axios
       .get('http://localhost:5000/api/SPEED/submit')
