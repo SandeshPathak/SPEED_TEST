@@ -42,18 +42,18 @@ router.post('/submit', (req, res) => {
 })
 
 router.get('/search', (req, res) => {
-  let title = req.query.title ?? '0';
-  let author = req.query.author ?? '0';
-  let description = req.query.description ?? '0';
-  let publishedDate = req.query.publishedDate ?? '0';
-  let publisher = req.query.publisher ?? '0';
+  let title = req.query.title;
+  // let author = req.query.author;
+  // let description = req.query.description;
+  // let publishedDate = req.query.publishedDate;
+  // let publisher = req.query.publisher;
 
-  console.log(title);
-
-  // Article.find({
-  //   $or: [{ title: req.query.title }, { author: req.query.author }, { description: req.query.description }, { publishedDate: req.query.publishedDate }, { publisher: req.query.publisher }]
-  // })
-  Article.find({ $text: { $search: title } })
+  Article.find({
+    "title": {
+      "$regex": title,
+      "$options": "i"
+    }
+  })
     .then((data) => res.json(data))
     .catch((err) => res.status(400).json({ error: "Database error!" }))
 })
