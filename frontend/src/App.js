@@ -8,6 +8,7 @@ import {
 import Home from "./pages/Home";
 import SEPractice from "./pages/SE-Practice";
 import SubmitArticle from "./pages/Submit-Article";
+import SearchArticle from "./pages/Search-Article";
 import ModeratorLogin from "./pages/Moderator-Login";
 import AnalystLogin from "./pages/Analyst-Login";
 import NotFoundPage from "./pages/404";
