@@ -42,7 +42,9 @@ router.post('/submit', (req, res) => {
 })
 
 router.get('/search', (req, res) => {
-  Article.find()
+  Article.find({
+    $or: [{ title }, { author }, { description }, { publishedDate }, { publisher }]
+  })
     .then((data) => res.json(data))
     .catch((err) => res.status(400).json({ error: "Database error!" }))
 })

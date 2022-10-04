@@ -12,14 +12,18 @@ const SearchArticle = () => {
     var publisher = document.getElementById("publisher").value;
 
     axios
-      .get('/api/SPEED/search')
-      // .then(res => { searchResults = res.data })
+      .get('/api/SPEED/search', null, {
+        params: {
+          title, author, description, publishedDate, publisher
+        }
+      })
+      .then(results)
       .catch(err => console.log("API error!"));
   };
 
   const formToSearchArticle = (
     <div>
-      <h2>Submit Article</h2>
+      <h2>Search Article</h2>
       <div className="container">
         <div className="form">
           <form onSubmit={handleSearch}>
