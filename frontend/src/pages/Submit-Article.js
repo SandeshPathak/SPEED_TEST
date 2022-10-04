@@ -14,7 +14,7 @@ const SubmitArticle = () => {
     var publisher = document.getElementById("publisher").value;
 
     axios
-      .get('http://localhost:5000/api/SPEED/submit')
+      .get('/api/SPEED/submit')
       .then(res => { setIsSubmitted(res.isSuccessful ? true : false) })
       .catch(err => console.log("API error!"));
   };
