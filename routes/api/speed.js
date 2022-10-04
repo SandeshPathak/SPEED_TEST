@@ -48,12 +48,16 @@ router.get('/search', (req, res) => {
   // let publishedDate = req.query.publishedDate;
   // let publisher = req.query.publisher;
 
-  Article.find({
+  Article.find([{
     "title": {
       "$regex": title,
       "$options": "i"
+    },
+    "author": {
+      "$regex": author,
+      "$options": "i"
     }
-  })
+  }])
     .then((data) => res.json(data))
     .catch((err) => res.status(400).json({ error: "Database error!" }))
 })
