@@ -52,7 +52,8 @@ router.get('/search', (req, res) => {
     "title": {
       "$regex": title,
       "$options": "i"
-    },
+    }
+  }, {
     "author": {
       "$regex": author,
       "$options": "i"
