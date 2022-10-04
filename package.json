@@ -27,10 +27,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maegastar/SPEED.git"
+    "url": ""
   },
   "bugs": {
-    "url": "https://github.com/maegastar/SPEED/issues"
+    "url": ""
   },
   "homepage": ".",
   "engines": {
