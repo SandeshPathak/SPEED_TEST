@@ -53,12 +53,8 @@ router.get('/search', (req, res) => {
       "$regex": title,
       "$options": "i"
     }
-  }, {
-    "author": {
-      "$regex": author,
-      "$options": "i"
-    }
   }])
+    // $or: [{ title: req.query.title }, { author: req.query.author }, { description: req.query.description }, { publishedDate: req.query.publishedDate }, { publisher: req.query.publisher }]
     .then((data) => res.json(data))
     .catch((err) => res.status(400).json({ error: "Database error!" }))
 })
